@@ -1,0 +1,22 @@
+{
+  "executionRoleArn": "arn:aws:iam::856327710032:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "test",
+      "image": "<IMAGE1_NAME>",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "family": "ecs-test"
+}
